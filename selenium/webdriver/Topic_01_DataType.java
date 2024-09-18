@@ -30,26 +30,26 @@ public class Topic_01_DataType {
     // Kiểu số nguyên (không có thập phân)
     byte bNumber = 10;
     short sNumber = 100;
-    int iNumber = 70000;
+    int iNumber = 50000;
     long lNumber = 1000000;
     // Kiểu số thực (có thập phân)
-    float fNumber = 10.5f;
-    double dNumber = 15.8d;
+    float fNumber = 10.9f;
+    double dNumber = 15.7d;
     // Kiểu logic
     boolean sex = true;
     // 2 - Kiểu dữ liệu tham chiêú (Reference Type)
     // Kiểu mảng (Array)
     // Mảng kiểu string
-    String[] studentName = {"Nguyễn Thuys", "Nguyen Thi Nga", "Nguyen Phuong Tho"};
-    int[] studentAge = {18, 18, 18};
+    String[] studentName = {"Nguyen Hien", "Nguyen Van A", "Vo An"};
+    int[] studentAge = {20, 20, 20};
 
     // Kiểu Object (đại diện cho các kiểu dữ liệu khác)
     // Đối tượng => chuyển đổi qua các kiểu dữ liệu khác
-    Object studentAddress = "123 PO Box";
-    Object employeeAge = 35;
+    Object studentAddress = "123 Box";
+    Object employeeAge = 27;
     Object employeeSex = false;
     // Kiểu chuỗi (string)
-    String name = "Thuy";
+    String name = "Alcoh";
     String employeeNumber = "123456789";
     // Class
     FirefoxDriver ffDriver = new FirefoxDriver();

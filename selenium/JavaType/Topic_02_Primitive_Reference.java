@@ -1,4 +1,4 @@
-package javaTester;
+package JavaType;
 
 public class Topic_02_Primitive_Reference{
     int x;

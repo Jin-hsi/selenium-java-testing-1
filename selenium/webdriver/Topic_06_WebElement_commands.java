@@ -19,7 +19,12 @@ public class Topic_06_WebElement_commands {
     }
     @Test
     public void TC_01_Element() {
+        // tương tấc trực tiếp lên
+        driver.findElement(By.cssSelector(""));
+
+        // thao tác nhiều lần trn 1 element thì nên khai báo biến
         WebElement element = driver.findElement(By.cssSelector("input#FirstName"));
+
         // xoa dl trong 1 editable element (nhap)
         // textbox / textarea / dropdown
         element.clear();
@@ -27,8 +32,9 @@ public class Topic_06_WebElement_commands {
         //nhap dl vao 1 editable element (nhap)
         element.sendKeys("");
 
-        // 1 - Element cha dung 1 loai locator, element con 1 loai locator
-        driver.findElement(By.cssSelector("div.form-fields")).findElement((By.cssSelector("input#FirstName")));
+        // 1 - Element cha dung 1 loai locator, element con 1 loai locator ( locatpr là xppath, css )
+        driver.findElement(By.cssSelector("div.form-fields"))
+                .findElement((By.cssSelector("input#FirstName")));
 
         //2- cha va con chung 1 loai locator
         driver.findElement(By.cssSelector("div.form-fields input#FirstName"));

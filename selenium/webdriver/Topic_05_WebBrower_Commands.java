@@ -149,7 +149,8 @@ public class Topic_05_WebBrower_Commands {
 
         // mở ra 1 url
         driver.navigate().to("https://live.techpanda.org/"); // bị ảnh hưởng bởi load time out
-        driver.navigate().to(new URL("https://live.techpanda.org/"));
+        //driver.navigate().to(new URL("https://live.techpanda.org/"));
+
 
     }
 

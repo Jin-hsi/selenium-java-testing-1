@@ -53,8 +53,10 @@ public class Topic_07_Browser_Excecise {
         Assert.assertEquals(driver.getTitle(),"Home page");
         driver.findElement(By.cssSelector("div.footer a[title='My Account']")).click();
         Assert.assertEquals(driver.getTitle(),"Customer Login");
-        driver.findElement(By.xpath("div.footer a[title='Create an Account']")).click();
+        //driver.findElement(By.xpath("div.footer a[title='Create an Account']")).click();
+        driver.findElement(By.cssSelector(".buttons-set a[title='Create an Account']")).click();
         Assert.assertEquals(driver.getTitle(),"Create New Customer Account");
+
 
     }
     @Test
@@ -67,10 +69,14 @@ public class Topic_07_Browser_Excecise {
         driver.findElement(By.cssSelector("div.footer a[title='My Account']")).click();
 
         // Click chuyển sang trang Create account
-        driver.findElement(By.xpath("div.footer a[title='Create an Account']")).click();
+        driver.findElement(By.cssSelector(".buttons-set a[title='Create an Account']")).click();
+
+        Assert.assertEquals(driver.getCurrentUrl(),"http://live.techpanda.org/index.php/customer/account/create/");
 
         //Quay lại trang trước đó
         driver.navigate().back();
+
+        Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/login/");
 
         // Chuyển về trang ước đó
         driver.navigate().forward();
@@ -93,7 +99,8 @@ public class Topic_07_Browser_Excecise {
         Assert.assertTrue(driver.getPageSource().contains("Login or Create an Account"));
 
         // Click chuyển sang trang Create account
-        driver.findElement(By.xpath("div.footer a[title='Create an Account']")).click();
+        driver.findElement(By.cssSelector(".buttons-set a[title='Create an Account']")).click();
+
 
         Assert.assertTrue(driver.getPageSource().contains("Create an Account"));
 
